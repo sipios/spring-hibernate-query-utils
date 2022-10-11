@@ -1,7 +1,7 @@
-package com.yannbriancon.interceptor;
+package com.sipios.interceptor;
 
-import com.yannbriancon.config.NPlusOneQueriesDetectionProperties;
-import com.yannbriancon.exception.NPlusOneQueriesException;
+import com.sipios.config.NPlusOneQueriesDetectionProperties;
+import com.sipios.exception.NPlusOneQueriesException;
 import org.hibernate.EmptyInterceptor;
 import org.hibernate.Transaction;
 import org.slf4j.Logger;

@@ -1,13 +1,13 @@
-package com.yannbriancon.interceptor;
+package com.sipios.interceptor;
 
 import ch.qos.logback.classic.Level;
 import ch.qos.logback.classic.Logger;
 import ch.qos.logback.classic.spi.LoggingEvent;
 import ch.qos.logback.core.Appender;
-import com.yannbriancon.utils.entity.Message;
-import com.yannbriancon.utils.entity.Post;
-import com.yannbriancon.utils.repository.MessageRepository;
-import com.yannbriancon.utils.repository.PostRepository;
+import com.sipios.utils.entity.Message;
+import com.sipios.utils.entity.Post;
+import com.sipios.utils.repository.MessageRepository;
+import com.sipios.utils.repository.PostRepository;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.runner.RunWith;

@@ -1,7 +1,7 @@
-package com.yannbriancon.interceptor;
+package com.sipios.interceptor;
 
-import com.yannbriancon.utils.entity.Message;
-import com.yannbriancon.utils.repository.MessageRepository;
+import com.sipios.utils.entity.Message;
+import com.sipios.utils.repository.MessageRepository;
 import org.junit.jupiter.api.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;

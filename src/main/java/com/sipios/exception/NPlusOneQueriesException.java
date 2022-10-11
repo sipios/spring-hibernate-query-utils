@@ -1,4 +1,4 @@
-package com.yannbriancon.exception;
+package com.sipios.exception;
 
 /**
  * Exception triggered when detecting N+1 queries
