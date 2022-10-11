@@ -1,6 +1,6 @@
-package com.yannbriancon.config;
+package com.sipios.config;
 
-import com.yannbriancon.interceptor.HibernateQueryInterceptor;
+import com.sipios.interceptor.HibernateQueryInterceptor;
 import org.springframework.boot.autoconfigure.orm.jpa.HibernatePropertiesCustomizer;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;

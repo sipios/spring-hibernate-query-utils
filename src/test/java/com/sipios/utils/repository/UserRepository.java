@@ -1,6 +1,6 @@
-package com.yannbriancon.utils.repository;
+package com.sipios.utils.repository;
 
-import com.yannbriancon.utils.entity.User;
+import com.sipios.utils.entity.User;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

@@ -1,4 +1,4 @@
-package com.yannbriancon.utils.entity;
+package com.sipios.utils.entity;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;

@@ -1,4 +1,4 @@
-package com.yannbriancon.config;
+package com.sipios.config;
 
 import org.springframework.boot.context.properties.ConfigurationProperties;
 

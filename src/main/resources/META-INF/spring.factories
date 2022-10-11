@@ -1,2 +1,2 @@
 org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
-  com.yannbriancon.config.HibernatePropertiesConfig
+  com.sipios.config.HibernatePropertiesConfig

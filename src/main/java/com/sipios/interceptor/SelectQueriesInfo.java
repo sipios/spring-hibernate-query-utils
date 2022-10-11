@@ -1,4 +1,4 @@
-package com.yannbriancon.interceptor;
+package com.sipios.interceptor;
 
 class SelectQueriesInfo {
     private final String initialSelectQuery;

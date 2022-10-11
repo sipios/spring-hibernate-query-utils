@@ -1,6 +1,7 @@
-package com.yannbriancon.utils.entity;
+package com.sipios.utils.entity;
 
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
@@ -9,18 +10,18 @@ import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
 @Entity
-@Table(name = "posts")
-public class Post {
+@Table(name = "avatars")
+public class Avatar {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @ManyToOne
-    @JoinColumn(name = "message_id")
-    private Message message;
+    @ManyToOne(fetch = FetchType.LAZY, optional = false)
+    @JoinColumn(name = "pseudo", referencedColumnName = "pseudo")
+    private User user;
 
-    public Post() {
+    public Avatar() {
     }
 
     public Long getId() {
@@ -31,11 +32,11 @@ public class Post {
         this.id = id;
     }
 
-    public Message getMessage() {
-        return message;
+    public User getUser() {
+        return user;
     }
 
-    public void setMessage(Message message) {
-        this.message = message;
+    public void setUser(User user) {
+        this.user = user;
     }
 }

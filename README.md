@@ -86,11 +86,13 @@ This library provides several benefits:
 ##### Maven
 
 Add the dependency to your project inside your `pom.xml` file with the right version
+
 ```xml
+
 <dependency>
-    <groupId>com.yannbriancon</groupId>
-    <artifactId>spring-hibernate-query-utils</artifactId>
-    <version>X.X.X</version>
+  <groupId>com.sipios</groupId>
+  <artifactId>spring-hibernate-query-utils</artifactId>
+  <version>X.X.X</version>
 </dependency>
 ```
 
@@ -149,8 +151,8 @@ class NPlusOneQueriesLoggingTest {
 
         LoggingEvent loggingEvent = loggingEventCaptor.getAllValues().get(0);
         assertThat(loggingEvent.getMessage())
-                .contains("N+1 queries detected on a getter of the entity com.yannbriancon.utils.entity.User\n" +
-                        "    at com.yannbriancon.interceptor.NPlusOneQueriesLoggingTest." +
+                .contains("N+1 queries detected on a getter of the entity com.sipios.utils.entity.User\n" +
+                        "    at com.sipios.interceptor.NPlusOneQueriesLoggingTest." +
                         "lambda$hibernateQueryInterceptor_isDetectingNPlusOneQueriesWhenMissingEagerFetchingOnQuery$0");
         assertThat(Level.ERROR).isEqualTo(loggingEvent.getLevel());
     }
@@ -188,8 +190,8 @@ void nPlusOneQueriesDetection_throwsExceptionWhenSessionIsCleared() {
         assert false;
     } catch (NPlusOneQueriesException exception) {
         assertThat(exception.getMessage())
-                .contains("N+1 queries detected on a getter of the entity com.yannbriancon.utils.entity.User\n" +
-                        "    at com.yannbriancon.interceptor.NPlusOneQueriesExceptionTest" +
+                .contains("N+1 queries detected on a getter of the entity com.sipios.utils.entity.User\n" +
+                        "    at com.sipios.interceptor.NPlusOneQueriesExceptionTest" +
                         ".getMessageAuthorNameWithNPlusOneQuery");
     }
 }
@@ -252,30 +254,30 @@ Example in a test:
 
 ```java
 ...
-import com.yannbriancon.interceptor.HibernateQueryInterceptor;
+import com.sipios.interceptor.HibernateQueryInterceptor;
 
 
 @RunWith(SpringRunner.class)
 @SpringBootTest
 @Transactional
 public class NotificationResourceIntTest {
-    @Autowired
-    private HibernateQueryInterceptor hibernateQueryInterceptor;
+  @Autowired
+  private HibernateQueryInterceptor hibernateQueryInterceptor;
 
-    @Test
-    public void getNotification_isOk() throws Exception {
-        // Initialize the query to 0 and allow the counting
-        hibernateQueryInterceptor.startQueryCount();
+  @Test
+  public void getNotification_isOk() throws Exception {
+    // Initialize the query to 0 and allow the counting
+    hibernateQueryInterceptor.startQueryCount();
 
-        // Call the resource that we want to test
-        MvcResult result = mvc.perform(get("/rest/notifications"))
-                .andExpect(status().isOk())
-                .andReturn();
+    // Call the resource that we want to test
+    MvcResult result = mvc.perform(get("/rest/notifications"))
+            .andExpect(status().isOk())
+            .andReturn();
 
-        // Get the query count for this thread and check that it is equal to the number of query you expect,
-        // Let's say 4 for the example.
-        Assertions.assertThat(hibernateQueryInterceptor.getQueryCount()).isEqualTo(4);
-    }
+    // Get the query count for this thread and check that it is equal to the number of query you expect,
+    // Let's say 4 for the example.
+    Assertions.assertThat(hibernateQueryInterceptor.getQueryCount()).isEqualTo(4);
+  }
 }
 ```
 

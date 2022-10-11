@@ -3,23 +3,17 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>com.yannbriancon</groupId>
+    <groupId>com.sipios</groupId>
     <artifactId>spring-hibernate-query-utils</artifactId>
-    <version>2.0.0</version>
+    <version>3.0.0</version>
     <packaging>jar</packaging>
 
     <name>spring-hibernate-query-utils</name>
     <description>Library giving tools to detect N+1 queries and count the queries generated with Spring and
         Hibernate
+        Fork from https://github.com/yannbriancon/spring-hibernate-query-utils
     </description>
-    <url>https://github.com/yannbriancon/spring-hibernate-query-utils</url>
-
-    <developers>
-        <developer>
-            <name>Yann Briançon</name>
-            <email>yann.briancon.73@gmail.com</email>
-        </developer>
-    </developers>
+    <url>https://github.com/sipios/spring-hibernate-query-utils</url>
 
     <licenses>
         <license>
@@ -30,9 +24,9 @@
     </licenses>
 
     <scm>
-        <url>https://github.com/yannbriancon/spring-hibernate-query-utils</url>
-        <connection>scm:git:git@github.com:yannbriancon/spring-hibernate-query-utils.git</connection>
-        <developerConnection>scm:git:git@github.com:yannbriancon/spring-hibernate-query-utils.git</developerConnection>
+        <url>https://github.com/sipios/spring-hibernate-query-utils</url>
+        <connection>scm:git:git@github.com:sipios/spring-hibernate-query-utils.git</connection>
+        <developerConnection>scm:git:git@github.com:sipios/spring-hibernate-query-utils.git</developerConnection>
     </scm>
 
     <properties>
@@ -42,7 +36,7 @@
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
-        <version>2.2.1.RELEASE</version>
+        <version>2.2.13.RELEASE</version>
         <relativePath/> <!-- lookup parent from entity -->
     </parent>
 
@@ -100,7 +94,7 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-source-plugin</artifactId>
-                <version>3.0.1</version>
+                <version>3.2.1</version>
                 <executions>
                     <execution>
                         <id>attach-sources</id>
@@ -113,7 +107,7 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-javadoc-plugin</artifactId>
-                <version>3.0.1</version>
+                <version>3.4.1</version>
                 <executions>
                     <execution>
                         <id>attach-javadocs</id>
@@ -126,7 +120,7 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-gpg-plugin</artifactId>
-                <version>1.5</version>
+                <version>3.0.1</version>
                 <executions>
                     <execution>
                         <id>sign-artifacts</id>
