@@ -90,7 +90,7 @@ Add the dependency to your project inside your `pom.xml` file with the right ver
 ```xml
 
 <dependency>
-  <groupId>com.sipioscom.sipios</groupId>
+  <groupId>com.sipios</groupId>
   <artifactId>spring-hibernate-query-utils</artifactId>
   <version>X.X.X</version>
 </dependency>
